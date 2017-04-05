@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  script(src= './js/' + jf)
+  script(src='./js/sr/sr.js')
+  script(src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js")
+  h1 Speak you Todos
+  p.lead Watch them appear below.
+  hr
+
+  body
+    ul.list-group

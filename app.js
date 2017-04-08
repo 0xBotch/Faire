@@ -5,6 +5,8 @@ const express = require('express');
 const chalk = require('chalk');
 const socketServer = require('./config/sockets');
 const errorHandler = require('errorhandler');
+const configs = require('./config/config');
+const router = require('./config/routes');
 
 /**
  * Create Express server.x
@@ -16,12 +18,11 @@ const errorHandler = require('errorhandler');
 /**
  * Express configuration.
  */
-require('./config/config')(app);
+configs(app);
 
 /**
  * Routing.
  */
- var router = require('./config/routes');
  app.use('/', router);
 
  /**
